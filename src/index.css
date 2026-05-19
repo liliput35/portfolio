@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+/* 1. Import the font */
+
+/* 2. Configure the theme (v4 way) */
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+}
+
+/* 3. Keep your custom animations */
+@keyframes fadeIn {
+  from { transform: translateY(-100px); opacity: 0; }
+  to   { transform: translateY(0);       opacity: 1; }
+}
+
+
+
+/* 1. Fade up (most common — subtle lift) */
+@keyframes fadeUp {
+  from { transform: translateY(24px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* 2. Fade in (no movement, just opacity) */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* 3. Fade up + slight blur (very trendy right now) */
+@keyframes fadeUpBlur {
+  from { transform: translateY(20px); opacity: 0; filter: blur(4px); }
+  to   { transform: translateY(0);    opacity: 1; filter: blur(0);   }
+}
+
+@utility animate-fadeUp     { animation: fadeUp     0.6s ease forwards; }
+@utility animate-fadeIn     { animation: fadeIn     0.6s ease forwards; }
+@utility animate-fadeUpBlur { animation: fadeUpBlur 0.6s ease forwards; }
+
+@utility animate-fadeIn {
+  animation: fadeIn 1.5s forwards;
+}
