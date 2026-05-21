@@ -1,6 +1,6 @@
 import Navbar from '../components/Navbar';
 import MainFooter from '../components/MainFooter';
-import ciocon from '../assets/images/ciocon.jpg'
+import ciocon from '../assets/images/ciocon1.jpg'
 import arrow from '../assets/images/diagonal-arrow.png'
 
 export default function About() {
