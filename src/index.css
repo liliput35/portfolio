@@ -42,3 +42,49 @@
 @utility animate-fadeIn {
   animation: fadeIn 1.5s forwards;
 }
+
+/* Hide default arrow icon */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-navigation-icon { 
+  display: none;
+}
+
+/* Button */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 9999px;
+
+  background-color: rgba(0, 0, 0, 0.45);
+
+  transition: all 0.2s ease;
+
+  backdrop-filter: blur(6px);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.65);
+  transform: scale(1.08);
+}
+
+.swiper-button-next {
+  background-image: url("/src/assets/images/next-right.png");
+}
+
+.swiper-button-prev {
+  background-image: url("/src/assets/images/next-left.png");
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgb(104, 104, 104) !important;
+}

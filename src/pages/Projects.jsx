@@ -8,58 +8,14 @@ import hiddenappimg from '../assets/images/hiddenapp.png';
 import babimg from '../assets/images/bab.png';
 import togglimg from '../assets/images/toggl1.png';
 
-export default function Projects() {
-  const projects = [
-    {
-      id: 1, 
-      proj_name: "BiteBook",
-      proj_desc: "Catering Management Web App", 
-      proj_img_addr: bitebookimg,  
-      proj_link: "https://github.com/liliput35/bitebook",  
-      proj_techstack: ["Laravel", "MySql", "Tailwind"]
-    }, 
-    {
-      id: 2, 
-      proj_name: "FluxTrack",
-      proj_desc: "Incident Reporting Web App", 
-      proj_img_addr: fluxtrackimg,  
-      proj_link: "https://github.com/liliput35/FluxTrack",  
-      proj_techstack: ["PHP", "MySql", "CSS", "JavaScript"]
-    }, 
-    {
-      id: 3, 
-      proj_name: "Gravelight",
-      proj_desc: "3d Narrative Adventure Game", 
-      proj_img_addr: gravelightimg,  
-      proj_link: "https://github.com/liliput35/gravelight",  
-      proj_techstack: ["Unity", "C#"]
-    },
-    {
-      id: 4, 
-      proj_name: "Hidden Apparitions",
-      proj_desc: "Augmented Reality Based Mobile Game", 
-      proj_img_addr: hiddenappimg,  
-      proj_link: "https://github.com/liliput35/hidden-apparitions",  
-      proj_techstack: ["Unity", "C#", "ARCore"]
-    },
-    {
-      id: 5, 
-      proj_name: "Bust-a-Beat",
-      proj_desc: "2d Rhythm Based Platformer", 
-      proj_img_addr: babimg,  
-      proj_link: "https://github.com/liliput35/bust-a-beat",  
-      proj_techstack: ["Unity", "C#"]
-    },
-    {
-      id: 6, 
-      proj_name: "Toggl",
-      proj_desc: "Task Tracking Application", 
-      proj_img_addr: togglimg,  
-      proj_link: "https://github.com/liliput35/Toggl",  
-      proj_techstack: ["Java"]
-    },
-  ] ;
+import { Link } from "react-router-dom";
+import { projects } from "../data/projectsData";
+import { useEffect } from 'react';
 
+export default function Projects() {
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <>
       <Navbar name="Lorenz Ciocon" />
@@ -71,18 +27,40 @@ export default function Projects() {
 
             <div className="projs-container md:grid md:grid-cols-2 md:gap-8">
               {projects.map((project, i) => (
-                <div className="project bg-[#f2f2f2] p-8 mb-4 md:mb-0 rounded-3xl overflow-hidden opacity-0 animate-fadeUpBlur" key={project.id} style={{ animationDelay: `${ 0.3+ i * 0.1}s` }}>
-                  <a href={project.proj_link} target='blank' className='group'>
-                    <h3 className='text-xl font-semibold mb-1 md:text-2xl'>{project.proj_name}</h3>
-                    <p className='text-md mb-2'>{project.proj_desc}</p>
+                <div
+                  key={project.slug}
+                  className="project bg-[#f2f2f2] p-8 mb-4 md:mb-0 rounded-3xl overflow-hidden opacity-0 animate-fadeUpBlur"
+                  style={{ animationDelay: `${0.3 + i * 0.1}s` }}
+                >
+                  <Link
+                    to={`/projects/${project.slug}`}
+                    className="group block"
+                  >
+                    <h3 className="text-xl font-semibold mb-1 md:text-2xl">
+                      {project.title}
+                    </h3>
 
-                    {project.proj_techstack.map((tech) => (
-                      <span className='mr-2 py-1 px-3 text-sm text-gray-500 rounded-full bg-white mb-2'>{tech}</span>
-                    ))}
+                    <p className="text-md mb-3">
+                      {project.subtitle}
+                    </p>
 
-                    <img src={project.proj_img_addr} alt={project.proj_name} className='transition-transform duration-500 group-hover:scale-115 mt-4 w-full scale-90'/>
-                  </a>
+                    <div className="mb-4 flex flex-wrap gap-2">
+                      {project.tech.map((tech) => (
+                        <span
+                          key={tech}
+                          className="py-1 px-3 text-sm text-gray-500 rounded-full bg-white"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
 
+                    <img
+                      src={project.cover}
+                      alt={project.title}
+                      className="transition-transform duration-500 group-hover:scale-115 mt-4 w-full scale-90 rounded-2xl"
+                    />
+                  </Link>
                 </div>
               ))}
             </div>

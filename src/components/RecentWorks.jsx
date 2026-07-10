@@ -29,11 +29,11 @@ export default function RecentWorks({ works = [] }) {
             className="mb-20 transition-transform duration-1000
               hover:-translate-y-16 md:text-right md:ml-15 md:w-[25%]"
           >
-            <a href={work.link} target='blank'>
+            <Link to={`/projects/${work.slug}`}>
               <h2 className="text-[#1A461E] text-[3em] font-normal mb-1">
                 0{work.id}
               </h2>
-              <h3 className="text-[2em] font-semibold pb-1
+              <h3 className="text-[1.75em] font-semibold pb-1
                 border-b-2 border-[#e5e5e5] md:border-none"
               >
                 {work.name}
@@ -46,7 +46,7 @@ export default function RecentWorks({ works = [] }) {
                 className="mt-4 w-full
                   shadow-[0_9px_15px_rgba(0,0,0,0.3)]"
               />
-            </a>
+            </Link>
           </div>
         ))}
       </div>

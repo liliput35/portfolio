@@ -2,8 +2,13 @@ import Navbar from '../components/Navbar';
 import MainFooter from '../components/MainFooter';
 import ciocon from '../assets/images/ciocon1.jpg'
 import arrow from '../assets/images/diagonal-arrow.png'
+import { useEffect } from 'react';
 
 export default function About() {
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
   const about = {
     about_header: "ABOUT ME",
     about_img_addr: ciocon,

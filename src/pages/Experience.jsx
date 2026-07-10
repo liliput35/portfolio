@@ -6,38 +6,42 @@ export default function Experience(){
     const experiences = [
         {
             id: 1, 
-            experience_name: "Frontend Officer", 
-            experience_org: "Google Developer Groups on Campus USLS", 
-            experience_date: "Present", 
-            experience_desc: "Collaborated in developing a promotional events website"
+            experience_name: "Software Development Intern", 
+            experience_org: "Department of Science and Technology NIR", 
+            experience_date: "May-June 2026", 
+            experience_desc: [
+                "Developed a Flutter mobile application for a client, from requirements documentation to implementation and deployment.",
+                "Built a React + Firebase web application for DOST's Calibration Services scheduling system.",
+                "Served as Project Lead for both, managing GitHub workflows, reviewing pull requests, resolving merge conflicts, and coordinating team tasks."
+            ]
         }, 
         {
             id: 2, 
-            experience_name: "BS Computer Science ", 
-            experience_org: "University of St. La Salle", 
+            experience_name: "Frontend Officer", 
+            experience_org: "Google Developer Groups on Campus USLS", 
             experience_date: "Present", 
-            experience_desc: "Currently learning Computer Science through a 4 year course"
+            experience_desc: ["Collaborated in developing a promotional events website"]
         }, 
         {
             id: 3, 
-            experience_name: "STEM Engineering Senior High School", 
-            experience_org: "St. John's Institute", 
-            experience_date: "May 2023", 
-            experience_desc: "Graduated with High Honors"
+            experience_name: "BS Computer Science ", 
+            experience_org: "University of St. La Salle", 
+            experience_date: "Present", 
+            experience_desc: ["Currently learning Computer Science through a 4 year course"]
         }, 
         {
             id: 4, 
-            experience_name: "Coding Course Completer", 
-            experience_org: "Scrimba", 
-            experience_date: "October 2021", 
-            experience_desc: "Completed two online courses in JavaScript and React at scrimba.com"
+            experience_name: "STEM Engineering Senior High School", 
+            experience_org: "St. John's Institute", 
+            experience_date: "May 2023", 
+            experience_desc: ["Graduated with High Honors"]
         }, 
         {
             id: 5, 
-            experience_name: "Junior High School Completer", 
-            experience_org: "St. John's Institute", 
-            experience_date: "May 2021", 
-            experience_desc: "Completed 10th grade with a general average of A-"
+            experience_name: "Coding Course Completer", 
+            experience_org: "Scrimba", 
+            experience_date: "October 2021", 
+            experience_desc: ["Completed two online courses in JavaScript and React at scrimba.com"]
         }, 
     ];
 
@@ -55,7 +59,13 @@ export default function Experience(){
                             <div className="exp opacity-0 animate-fadeUpBlur relative after:absolute after:content-[''] after:w-4 after:h-4 after:bg-[#1a461e] after:-left-9.25 after:top-1" key={experience.id} style={{ animationDelay: `${ 0.3+ i * 0.1}s` }}>
                                 <p className="text-sm md:text-md text-gray-500">{experience.experience_date}</p>
                                 <h3 className="text-xl md:text-2xl">{experience.experience_name}, <span className="font-semibold">{experience.experience_org}</span></h3>
-                                <p className="text-md md:text-lg mb-6">{experience.experience_desc}</p>
+                                <div className="mb-6 space-y-1">
+                                {experience.experience_desc.map((desc, index) => (
+                                    <p key={index} className="text-md md:text-lg">
+                                    {desc}
+                                    </p>
+                                ))}
+                                </div>
                             </div>
                             
                         ))}

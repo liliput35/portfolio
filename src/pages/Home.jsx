@@ -10,6 +10,9 @@ import recent2 from '../assets/images/recent2.png'
 import recent3 from '../assets/images/recent3.png'
 import recent4 from '../assets/images/recent6.png'
 
+import dost from '../assets/projects/dost/dostdash.png'
+import raft from '../assets/projects/raft/RAFTproj.png'
+
 function Home() {
   
 
@@ -45,27 +48,27 @@ function Home() {
         <RecentWorks works={[
             {
               id: 1,
-              name: 'BiteBook',
-              description: 'catering management web-app',
-              tech_stack: 'Laravel, Tailwind',
-              img_addr: recent4, 
-              link: "https://github.com/liliput35/bitebook"
+              slug: "dost",
+              name: 'Calibration Scheduling',
+              description: 'service scheduling web-app',
+              tech_stack: 'React, Firebase, Google Apps Script',
+              img_addr: dost, 
             },
             {
               id: 2,
-              name: 'FluxTrack',
-              description: 'incident reporting web-app',
-              tech_stack: 'PHP, JS, MySql',
-              img_addr: recent2, 
-              link: "https://github.com/liliput35/FluxTrack"
+              name: 'RAFT',
+              slug: "raft",
+              description: 'sugarcane farm management app',
+              tech_stack: 'Flutter, SQLite, Android',
+              img_addr: raft, 
             },
             {
               id: 3,
-              name: 'Gravelight',
-              description: '3d narrative adventure game',
-              tech_stack: 'Unity, C#',
-              img_addr: recent1, 
-              link: "https://github.com/liliput35/gravelight"
+              name: 'BiteBook',
+              slug: "bitebook",
+              description: 'catering management web-app',
+              tech_stack: 'Laravel, Tailwind',
+              img_addr: recent4, 
             },
             ]} />
         <MainFooter/>
