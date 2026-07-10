@@ -12,12 +12,12 @@ export default function About() {
   const about = {
     about_header: "ABOUT ME",
     about_img_addr: ciocon,
-    about_text: "Hi, my name is Lorenz Nicolas Ciocon. I'm currently in third year college studying for a Computer Science degree in Bacolod City, Philippines. I started learning frontend development by myself with the help of youtube and online courses such as the Javascript and React courses on Scrimba. I've also gained experience in Fullstack Web, Unity, and Java Object Oriented Programming through school by making various projects such as games, and other GUI based systems.",
+    about_text: "Hi, my name is Lorenz Nicolas Ciocon. I'm currently a fourth-year Computer Science student in Bacolod City, Philippines. I began learning frontend development through online resources and have since expanded into full-stack web and mobile development using React, Flutter, Laravel, Firebase, and SQL. During my software development internship, I built real-world systems that streamlined scheduling and farm management workflows. I enjoy creating software that solves practical problems while continuously learning new technologies.",
   };
 
   const skills = [
-    { id: 1, skill_name: "Game Development", skill_desc: "Proficient in designing and developing interactive 2D and 3D games using Unity Engine and C#. Experienced in game mechanics, level design, and implementing gameplay logic. Developed a 2D rhythm-based platformer and a 3D adventure game as part of team projects" },
-    { id: 2, skill_name: "Full-Stack Web Development", skill_desc: "Skilled in building full-stack web applications using PHP, MySQL, HTML, CSS, and JavaScript. Able to implement CRUD functionality, database interactions, and responsive interfaces. Created an Incident Reporting System." },
+    { id: 1, skill_name: "Full-Stack Web & Mobile Development", skill_desc: "Experienced in developing full-stack web and mobile applications using using modern web and mobile development frameworks. Skilled in building responsive interfaces, integrating databases, implementing authentication, and developing scalable solutions. Delivered real-world systems for two clients that streamlined scheduling, farm management, and business workflows." },
+    { id: 2, skill_name: "Game Development", skill_desc: "Proficient in designing and developing interactive 2D and 3D games using Unity Engine and C#. Experienced in game mechanics, level design, and implementing gameplay logic. Developed a 2D rhythm-based platformer and a 3D adventure game as part of team projects" },
   ];
 
   const frontendTech = [
@@ -25,16 +25,19 @@ export default function About() {
     { id: 2, tech: "CSS" },
     { id: 3, tech: "JavaScript" },
     { id: 4, tech: "React" },
-    { id: 5, tech: "Tailwind" },
-    { id: 6, tech: "Bootstrap" },
+    { id: 5, tech: "Flutter" },
+    { id: 6, tech: "Tailwind" },
+    { id: 7, tech: "Bootstrap" },
   ];
 
   const backendTech = [
-    { id: 1, tech: "PHP" },
-    { id: 2, tech: "MySQL" },
-    { id: 3, tech: "Java" },
-    { id: 4, tech: "Laravel" },
-    { id: 5, tech: "C#" },
+    { id: 1, tech: "Laravel" },
+    { id: 2, tech: "PHP" },
+    { id: 3, tech: "Firebase" },
+    { id: 4, tech: "MySQL" },
+    { id: 5, tech: "SQLite" },
+    { id: 6, tech: "Java" },
+    { id: 7, tech: "C#" },
   ];
 
   return (
@@ -52,7 +55,7 @@ export default function About() {
               className="w-1/4 max-w-35 max-h-50 rounded-[20px] mb-8 object-cover"
             />
             <p className="lg:text-[1.75em] text-2xl mb-16"> 
-              Hi, my name is <span className='font-semibold'>Lorenz Nicolas Ciocon</span>. I'm currently in third year college studying for a Computer Science degree in Bacolod City, Philippines. I started learning frontend development by myself with the help of youtube and online courses such as the Javascript and React courses on Scrimba. I've also gained experience in Fullstack Web, Unity, and Java Object Oriented Programming through school by making various projects such as games, and other GUI based systems.
+              Hi, my name is <span className='font-semibold'>Lorenz Nicolas Ciocon</span>. I'm currently a fourth-year Computer Science student in Bacolod City, Philippines. I began learning frontend development through online resources and have since expanded into full-stack web and mobile development using React, Flutter, Laravel, Firebase, and SQL. During my software development internship, I built real-world systems that streamlined scheduling and farm management workflows. I enjoy creating software that solves practical problems while continuously learning new technologies.
             </p>
           </div>
         </section>
